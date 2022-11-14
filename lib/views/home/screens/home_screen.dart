@@ -9,6 +9,7 @@ class HomeScreen extends StatelessWidget {
     final size = MediaQuery.of(context).size;
     return Scaffold(
       body: PageView.builder(
+        scrollDirection: Axis.vertical,
         itemCount: 3,
         itemBuilder: (context, index) => newsContainer(
           size: size,
