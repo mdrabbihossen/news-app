@@ -24,7 +24,6 @@ Widget newsContainer({
               overflow: TextOverflow.ellipsis,
             ),
           ),
-
           Padding(
             padding: const EdgeInsets.symmetric(
               horizontal: 20.0,
@@ -37,15 +36,21 @@ Widget newsContainer({
             ),
           ),
           Spacer(),
-          Align(
-            alignment: Alignment.centerRight,
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 15.0),
-              child: ElevatedButton(
-                onPressed: () {
-                  debugPrint('Going to $newsUrl');
-                },
-                child: Text('Read More'),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 15.0),
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                  backgroundColor: kButtonColor,
+                  elevation: 0,
+                  minimumSize: Size(double.infinity, size.height * 0.08)),
+              onPressed: () {
+                debugPrint('Going to $newsUrl');
+              },
+              child: Text(
+                'Read More',
+                style: kTitleTextStyle.copyWith(
+                  fontSize: 20,
+                ),
               ),
             ),
           ),
