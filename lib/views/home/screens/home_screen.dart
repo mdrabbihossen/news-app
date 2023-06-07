@@ -11,12 +11,15 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('News App'),
-      ),
-      body: const Center(
-        child: Text('Hello World'),
-      ),
-    );
+        appBar: AppBar(
+          title: const Text('News App'),
+        ),
+        body: SafeArea(
+          child: Column(
+            children: [
+              Text('Number of News'),
+            ],
+          ),
+        ));
   }
 }
